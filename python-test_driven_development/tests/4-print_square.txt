@@ -1,0 +1,49 @@
+# Test cases for print_square function
+
+>>> print_square = __import__('4-print_square').print_square
+
+# Test case 1 - Normal usage with size 4
+>>> print_square(4)
+####
+####
+####
+####
+
+# Test case 2 - Normal usage with size 10
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+# Test case 3 - Normal usage with size 0
+>>> print_square(0)
+
+
+# Test case 4 - Normal usage with size 1
+>>> print_square(1)
+#
+
+# Test case 5 - ValueError when size is -1
+>>> print_square(-1)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+# Test case 6 - TypeError when size is a float
+>>> print_square(2.5)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+# Test case 7 - Missing size argument (should raise TypeError)
+>>> print_square()
+Traceback (most recent call last):
+    ...
+TypeError: print_square() missing 1 required positional argument: 'size'
