@@ -1,9 +1,9 @@
 -- Creates the MySQL server user user_0d_1.
 CREATE USER
-    IF NOT EXITSTS 'user_0d_1'@'localhost'
+    IF NOT EXISTS 'user_0d_1'@'localhost'
     IDENTIFIED BY 'user_0d_1_pwd';
 GRANT ALL PRIVILAGES
     ON *.*
     TO 'user_0d_1'@'localhost'
     IDENTIFIED BY 'user_0d_1_pwd';
-FLUSH PRIVILAGES;
+FLUSH PRIVILEGES;
