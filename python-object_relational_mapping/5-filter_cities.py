@@ -29,6 +29,9 @@ if __name__ == '__main__':
     """
     cursor.execute(query, (state_name,))
     result = cursor.fetchone()[0]
-    print(result)
+    if result is not None:
+        print(result)
+    else:
+        print("")
     cursor.close()
     db.close()
