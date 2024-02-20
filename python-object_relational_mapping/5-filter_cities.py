@@ -28,8 +28,7 @@ if __name__ == '__main__':
     WHERE states.name = %s
     """
     cursor.execute(query, (state_name,))
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    result = cursor.fetchone()[0]
+    print(result if result else "Not found")
     cursor.close()
     db.close()
