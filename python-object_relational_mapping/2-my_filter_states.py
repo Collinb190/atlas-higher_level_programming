@@ -21,7 +21,7 @@ if __name__ == '__main__':
         db=database
     )
     cursor = db.cursor()
-    cursor.execute (
+    cursor.execute(
         "SELECT * FROM states WHERE name LIKE BINARY '{}'"
         .format(state_name)
     )
