@@ -7,9 +7,11 @@ from sqlalchemy import Column, Integer, String
 
 
 Base = declarative_base()
+
+
 class State(Base):
     """State class with id and name fields."""
-    __tablename__  = 'states'
+    __tablename__ = 'states'
     id = Column(
         Integer,
         primary_key=True,
