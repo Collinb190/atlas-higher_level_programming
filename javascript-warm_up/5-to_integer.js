@@ -5,5 +5,5 @@ const result = Number(argOne);
 if (isNaN(result)) {
   console.log('Not a number');
 } else {
-  console.log(result);
+  console.log('My number: ${result}');
 }
