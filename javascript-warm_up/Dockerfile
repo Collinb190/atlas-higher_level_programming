@@ -2,7 +2,8 @@
 FROM ubuntu:20.04
 
 # Update package lists and install Node.js
-RUN apt-get update && apt-get install -y nodejs npm
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs npm
 
 # Install semistandard globally
 RUN npm install semistandard --global
