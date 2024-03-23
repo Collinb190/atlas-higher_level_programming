@@ -1,9 +1,13 @@
 # Use Ubuntu as the base image
 FROM ubuntu:20.04
 
-# Update package lists and install Node.js
+# Install curl
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs npm
+    DEBIAN_FRONTEND=noninteractive apt-get install -y curl
+
+# Install Node.js 14
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN apt-get install -y nodejs
 
 # Install semistandard globally
 RUN npm install semistandard --global
